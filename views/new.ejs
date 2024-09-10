@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+    <header>
+        <form action="/comments" method="post">
+            <label for="UserName"> UserName:</label>
+            <input id="UserName" type="text" name="name" placeholder="UserName">
+            <fieldset>
+                <legend><label for="comment">Comment:</label></legend>
+                <textarea id="comment" name="comment" style="width: 400px; height: 300px;"></textarea>
+            </fieldset>
+            <button>Add</button>
+        </form>
+    </header>
+    </div>
+    <%- include("partials/footer") %>

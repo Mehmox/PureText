@@ -1,0 +1,36 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: 25px;
+}
+
+fieldset {
+    border: 2px solid black;
+    position: relative;
+    margin: 20px;
+    width: 300px;
+}
+
+legend {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: white;
+    font-weight: bold;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    border: solid 5px;
+}

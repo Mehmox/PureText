@@ -1,15 +1,29 @@
-<%- include("partials/header") %>
-    <title>All Comments</title>
-    <%- include("partials/mid") %>
+<%- include("partials/indexheader") %>
+    <fieldset>
+        <legend>
+            <a href="/comments/new">New</a>
+        </legend>
         <h1>All Comments</h1>
         <ul>
+            <li>
+                <b>
+                    Admin(Mehmox)
+                </b> says:
+                Here has no protection about chat filter pls choose your word carefully
+                10/09/2024 20:06:05
+            </li>
             <% for (const user of allcomments) {%>
                 <li>
-                    <%= user.comment %>- <b>
+                    <p><b>
                             <%= user.name %>
                         </b>
-                        <%= user.date %>
+                        <a href="/comments/<%=user.id%>">details</a>
+                        <br>
+                        <%= user.comment %>
+                    </p>
                 </li>
                 <%} %>
         </ul>
-        <%- include("partials/footer") %>
+    </fieldset>
+    </div>
+    <%- include("partials/footer") %>

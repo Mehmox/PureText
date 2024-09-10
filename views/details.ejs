@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+    <section>
+        <header>
+            UserName:
+            <b>
+                <%= comment.name %>
+            </b><br>
+            Comment:<%= comment.comment %> <br>
+
+                Date:<%=comment.date.created%> <br>
+
+                    <% if(comment.date.edited!=="" ) {%>
+                        Last Update:<%=comment.date.edited%>
+                            <% } %>
+                                <section>
+                                    <a href="/comments/<%=comment.id%>/edit">Edit</a>
+                                    <form action="/comments/<%=comment.id%>?_method=delete" method="post"
+                                        style="display: inline;">
+                                        <button>Delete</button>
+                                    </form>
+                                </section>
+        </header>
+    </section>
+    </div>
+    <%- include("partials/footer") %>

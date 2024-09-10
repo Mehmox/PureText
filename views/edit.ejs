@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+    <header>
+        <form action="/comments/<%= comment.id%>?_method=put" method="post">
+            <label for="UserName"> UserName:</label>
+            <input id="UserName" type="text" name="name" value="<%= comment.name %>">
+            <h2>Comment:</h2>
+            <fieldset>
+                <legend><label for="comment">Comment:</label></legend>
+                <textarea id="comment" name="comment"
+                    style="width: 400px; height: 300px;"><%= comment.comment %></textarea>
+            </fieldset>
+            <button>Save</button>
+        </form>
+    </header>
+    </div>
+    <%- include("partials/footer") %>
