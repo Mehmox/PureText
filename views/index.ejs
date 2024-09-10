@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+    <title>All Comments</title>
+    <%- include("partials/mid") %>
+        <h1>All Comments</h1>
+        <ul>
+            <% for (const user of allcomments) {%>
+                <li>
+                    <%= user.comment %>- <b>
+                            <%= user.name %>
+                        </b>
+                        <%= user.date %>
+                </li>
+                <%} %>
+        </ul>
+        <%- include("partials/footer") %>
